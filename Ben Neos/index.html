@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Neos</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        background-color: blueviolet;
+      }
+      .main_header {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .header_wrapper > ul {
+        display: flex;
+        list-style-type: none;
+        padding-right: 30px;
+      }
+      .header_wrapper > ul li {
+        margin: 0 15px;
+      }
+      .header_wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1px;
+        margin-top: 20px;
+      }
+      .header_wrapper > h1 {
+        font-weight: bold;
+      }
+      .header_wrapper > p {
+        margin-top: 10px;
+      }
+      .header_wrapper > ul {
+        margin-top: 10px;
+      }
+      /* container kısmı */
+      .container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        background-color: white;
+        padding: 60px 80px 100px;
+        margin-bottom: 60px;
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      /* hakkımda kısmı */
+      .hakkımda_wrapper {
+        display: flex;
+      }
+      .column_25 {
+        width: 25%;
+      }
+      .column_25 > img {
+        margin-top: 10px;
+      }
+      .column_75 {
+        width: 75%;
+        padding-left: 50px;
+      }
+      /* yetenek kısmı*/
+      .yetenekler {
+        margin-top: 60px;
+        display: flex;
+      }
+      .column_50 {
+        width: 50%;
+        padding: 30px;
+      }
+      .column_25 img:hover {
+        transition: transform 0.3s;
+        transform: scale(1.1);
+      }
+      /* projeler kısmı*/
+      .projeler {
+        margin-top: 60px;
+      }
+      .column_100 {
+        display: flex;
+      }
+      .column_100 > div {
+        padding: 20px;
+      }
+      .column_100 > div:hover {
+        transition: transform 0.3s;
+        transform: scale(1.1);
+      }
+      /* deneyimler kısmı */
+      .deneyimler {
+        margin-top: 60px;
+      }
+      .d_100 {
+        margin-bottom: 60px;
+      }
+      /* hesapla kısmı*/
+      .hesapla {
+        display: flex;
+      }
+      .panel {
+        padding: 10px;
+      }
+      .panel > select {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        border-color: gray;
+      }
+      .button_place {
+        padding: 10px;
+        display: flex;
+        align-items: flex-end;
+      }
+      .button_place > button {
+        padding: 5px;
+        width: 50%;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: white;
+        font-weight: 600;
+      }
+      /* iletişim kısmı */
+      .iletişim {
+        margin-top: 60px;
+      }
+      .iletişim_wrapper {
+        display: flex;
+      }
+      .iletişim input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      #neos {
+        animation: neos 2s ease;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes neos {
+        0% {
+          color: white;
+        }
+        50% {
+          color: blueviolet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--ana başlık kısmı-->
+    <div class="main_header">
+      <div class="header_wrapper">
+        <h1>Ben <span id="neos">Neos Yazılım</span></h1>
+        <p>Full Stack Web Developer</p>
+        <ul>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-linkedin"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hakkımda">
+        <h2>hakkımda</h2>
+        <div class="hakkımda_wrapper">
+          <div class="column_25">
+            <img src="img-01.jpg" alt="" />
+          </div>
+          <div class="column_75">
+            <p class="Hakkımda_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              modi, expedita illum eligendi dignissimos nisi quasi similique
+              neque quaerat deserunt ea nulla et accusamus. Quae ex cupiditate
+              fugiat nemo distinctio. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Itaque modi, expedita illum eligendi dignissimos
+              nisi quasi similique neque quaerat deserunt ea nulla et accusamus.
+              Quae ex cupiditate fugiat nemo distinctio. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Itaque modi, expedita illum
+              eligendi dignissimos nisi quasi similique neque quaerat deserunt
+              ea nulla et accusamus. Quae ex cupiditate fugiat nemo distinctio.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="yetenekler">
+        <div class="column_50">
+          <h2>YETENEKLER</h2>
+          <i>html</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="500">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 90%"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <i>css</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="1000">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 80%"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <i>javascript</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="1500">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 70%"
+              aria-valuenow="70"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <i>jQuary</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="2000">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 70%"
+              aria-valuenow="70"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <i>bootstrap5</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="2500">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 60%"
+              aria-valuenow="60"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <i>paython-dijango</i>
+          <div class="progress" data-aos="zoom-in" data-aos-duration="3000">
+            <div
+              class="progress-bar progress-bar-striped"
+              role="progressbar"
+              style="width: 50%"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+        <div class="column_50">
+          <h2>AÇIKLAMALAR</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            modi, expedita illum eligendi dignissimos nisi quasi similique neque
+            quaerat deserunt ea nulla et accusamus. Quae ex cupiditate fugiat
+            nemo distinctio. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Itaque modi, expedita illum eligendi dignissimos nisi quasi
+            similique neque quaerat deserunt ea nulla et accusamus. Quae ex
+            cupiditate fugiat nemo distinctio. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Itaque modi, expedita illum eligendi
+            dignissimos nisi quasi similique neque quaerat deserunt ea nulla et
+            accusamus. Quae ex cupiditate fugiat nemo distinctio.
+          </p>
+        </div>
+      </div>
+      <div class="projeler">
+        <h2>projeler</h2>
+        <div class="column_100">
+          <div class="column_25">
+            <img
+              src="img-02.jpg"
+              data-aos="zoom-in-right"
+              data-aos-duration="500"
+            />
+          </div>
+          <div class="column_25">
+            <img
+              src="img-03.jpg"
+              data-aos="zoom-in-right"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="column_25">
+            <img
+              src="img-04.jpg"
+              data-aos="zoom-in-right"
+              data-aos-duration="1500"
+            />
+          </div>
+          <div class="column_25">
+            <img
+              src="img-05.jpg"
+              height="124px"
+              data-aos="zoom-in-right"
+              data-aos-duration="2000"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="deneyimler">
+        <div class="d_100">
+          <small>2018-2019</small>
+          <h4>front end web developer</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            molestiae amet, enim perferendis corporis, adipisci consequatur sit
+            iste, perspiciatis dolorum nisi sed tempora. Dolores quidem quisquam
+            quaerat illum voluptates voluptatum?
+          </p>
+        </div>
+        <div class="d_100">
+          <small>2019-2020</small>
+          <h4>front end web developer</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            molestiae amet, enim perferendis corporis, adipisci consequatur sit
+            iste, perspiciatis dolorum nisi sed tempora. Dolores quidem quisquam
+            quaerat illum voluptates voluptatum?
+          </p>
+        </div>
+      </div>
+      <div class="hesapla">
+        <div class="column_25 panel">
+          <label for="konsept">konsept</label><br />
+          <select name="konsept" id="konsept1">
+            <option value="kurumsal">kurumsal</option>
+            <option value="blog">blog</option>
+            <option value="e-ticaret">e-ticaret</option>
+            <option value="haber">haber</option>
+          </select>
+        </div>
+        <div class="column_25 panel">
+          <label for="panel">yönetici paneli</label><br />
+          <select name="panel" id="panel1">
+            <option value="var">var</option>
+            <option value="yok">yok</option>
+          </select>
+        </div>
+        <div class="column_25 panel">
+          <label for="tasarım">tasarım</label><br />
+          <select name="tasarım" id="tasarım1">
+            <option value="tasarım">tasarım</option>
+            <option value="örnek">örnek</option>
+          </select>
+        </div>
+        <div class="column_25 button_place">
+          <button type="button">hesapla</button>
+        </div>
+      </div>
+      <div class="iletişim">
+        <div class="iletişim_wrapper">
+          <div class="column_50 iletişim_int">
+            <h2>İLETİŞİM</h2>
+            <form>
+              <input type="text" width="100%" placeholder="isim soyisim" />
+              <input type="text" width="100%" placeholder="e-posta" />
+              <textarea style="width: 100%" name="" rows="10"></textarea>
+            </form>
+          </div>
+          <div class="column_50 iletişim_map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.0865668826914!2d28.872692950754406!3d40.97958522903764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabd361d9f2bcd%3A0x109cda61c48e4b76!2sNeos%20Yaz%C4%B1l%C4%B1m%20Akademi!5e0!3m2!1str!2str!4v1651164217569!5m2!1str!2str"
+              width="100%"
+              height="430"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
